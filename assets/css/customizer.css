@@ -1,0 +1,43 @@
+/*
+	CSS for the styling of Them Customizer.
+*/
+#customize-theme-controls #accordion-section-kindler_pro .accordion-section-title {
+  color: #d2854c;
+}
+#customize-theme-controls #accordion-section-kindler_pro .accordion-section-title:before {
+  position: relative;
+  content: "\f005";
+  font-family: "FontAwesome";
+  top: 0;
+  padding-right: 5px;
+}
+#customize-theme-controls #accordion-section-kindler_pro > h3.accordion-section-title {
+  background: #d2854c;
+  color: #fff;
+  border-left-color: #a75f2a;
+}
+#customize-theme-controls #accordion-section-kindler_pro > h3.accordion-section-title:after {
+  color: #fff;
+}
+#customize-theme-controls li h2.fb-like-title,
+#customize-theme-controls li h2.twitter-title,
+#customize-theme-controls li h2.pro-title,
+#customize-theme-controls li h2.dvt-title {
+  font-family: "Cabin", sans-serif;
+  font-weight: 300;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8em;
+  letter-spacing: .03em;
+}
+#customize-theme-controls li a.kindler_rev:before {
+  content: "\f005";
+  font-family: "FontAwesome";
+  color: #eccb15;
+  padding-right: 5px;
+}
+#customize-theme-controls li a.divjot:before {
+  content: "\f25b";
+  font-family: "FontAwesome";
+  padding-right: 5px;
+}

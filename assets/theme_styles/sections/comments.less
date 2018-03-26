@@ -1,0 +1,92 @@
+//----Comment----//
+
+#comments {
+  h2.comments-title {
+    .font2;
+    margin: 0px;
+    padding: 20px 0;
+    background: url(../images/pattern.png) 0% 100% repeat-x;
+  }
+  ol {
+    list-style: none;
+    margin-top: 20px;
+    padding: 10px;
+    li {
+      margin-bottom: 40px;
+      .comment-body {
+        font-family: "Cabin", sans-serif;
+        .comment-author {
+          padding-bottom: 10px;
+          img {
+            height: 48px;
+            width: auto;
+          }
+          a {
+            color: @site-color;
+            font-weight: 700;
+            font-style: normal;
+            margin-left: 10px;
+          }
+        }
+        .commentmetadata {
+          margin: 10px auto;
+          padding: 8px 0px;
+          border-top: solid 2px #eee;
+          border-bottom: solid 2px #eee;
+          a {
+            font-size: 12px;
+            color: lighten(@color2, 5%);
+            margin-left: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          span.says {
+            display: none;
+          }
+          .comment-edit-link {
+            color: @site-color;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            float: right;
+          }
+        }
+        .reply {
+          font-weight: 700;
+          text-transform: uppercase;
+          a {
+            color: white;
+            background: @site-color;
+            padding: 7px 10px;
+          }
+        }
+      }
+    }
+  }
+  #respond {
+    a {
+      color: @site-color;
+    }
+    h3#reply-title {
+      .font2;
+      text-transform: uppercase;
+    }
+    textarea {
+      outline: none;
+      border-radius: 0px;
+    }
+    .form-submit {
+      input[type="submit"] {
+        font-size: 12px;
+        text-shadow: none;
+        box-shadow: none;
+        padding: 10px 14px;
+        border-radius: 0px;
+        background: #ddd;
+        text-transform: uppercase;
+        color: #777;
+        border: solid 1px #ccc;
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@
 	<?php if (has_post_thumbnail()) : ?>
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('kindler-home-thumb'); ?></a>
 	<?php else: ?>	
-		<a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri()."/images/dthumb.jpg" ); ?>"></a>
+		<a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri()."/assets/images/dthumb.jpg" ); ?>"></a>
 	<?php endif; ?>	
 	</div>
 

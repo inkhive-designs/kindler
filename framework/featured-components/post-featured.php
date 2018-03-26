@@ -5,6 +5,7 @@
  *
  **/
 ?>
+<?php if ( is_front_page() && get_theme_mod( 'kindler-fp-enable' ) ) : ?>
 		<div id="fp-wrapper" class="container">
 			<h1 class="fp-title"><?php _e('FEATURED POSTS','kindler'); ?></h1>
 				<ul id="kindler-fp">	
@@ -22,7 +23,7 @@
 									<?php if ( has_post_thumbnail() ) : ?>
 										<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('kindler-fp-thumb'); ?></a>
 									<?php else : ?>
-										<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri() . '/images/dthumb-fp.jpg'; ?>"></a>
+										<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/dthumb-fp.jpg'; ?>"></a>
 									<?php endif; ?>
 									<div class="hexagon"></div>
 									<div class="fp-title">
@@ -45,6 +46,7 @@
 						
 				</ul>
 		</div>
-				
+<?php endif; ?>
+
 
 

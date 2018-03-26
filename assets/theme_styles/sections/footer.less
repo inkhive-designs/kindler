@@ -1,0 +1,75 @@
+//----Secondary Footer----//
+
+#footer-wrapper {
+  background-color: #333;
+  padding-top: 25px;
+  border-top: solid 10px @color2;
+  margin-top: 20px;
+  color: #bbb;
+  #social-icons {
+    text-align: center;
+    margin: 20px auto;
+    i {
+      font-size: 30px;
+      margin: auto 15px;
+      transition: color .2s ease;
+      color: #eee;
+    }
+  }
+  a {
+    color: #ddd;
+    text-shadow: 0px 1px 0px #000000;
+  }
+  aside {
+    ul {
+      margin-left: 10px;
+      padding: 0px;
+      li {
+        padding: 10px 0px;
+        border-top: solid 1px #444;
+        border-bottom: solid 1px #222;
+        list-style: none;
+        &:before {
+          content: "\f105";
+          font-family: "FontAwesome";
+          position: relative;
+          margin-right: 10px;
+          color: @site-color;
+        }
+        &:first-child {
+          border-top: none;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    h1.widget-title {
+      position: relative;
+      .font2;
+      font-size: 25px;
+      text-transform: uppercase;
+      color: white;
+      text-shadow: 0px 1px 0px #000;
+      &:before {
+        content: "\f068";
+        font-family: "FontAwesome";
+        color: @site-color;
+        margin-right: 20px;
+      }
+    }
+  }
+  .widget_calendar {
+    color: #ddd;
+  }
+  #colophon {
+    padding: 20px;
+    color: white;
+    background: @color2;
+    text-align: center;
+    a {
+      color: @site-color;
+      text-shadow: none;
+    }
+  }
+}

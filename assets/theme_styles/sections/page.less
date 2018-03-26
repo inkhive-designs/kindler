@@ -1,0 +1,136 @@
+
+//----Other Pages----//
+
+.date {
+  #primary {
+    header:before {
+      content: "\f073";
+      font-family: "FontAwesome";
+      font-size: 38px;
+      color: #777;
+    }
+  }
+}
+
+.category {
+  #primary {
+    header:before {
+      content: "\f07c";
+      font-family: "FontAwesome";
+      font-size: 38px;
+      color: #777;
+    }
+  }
+}
+
+.tag {
+  #primary {
+    header:before {
+      content: "\f02c";
+      font-family: "FontAwesome";
+      font-size: 38px;
+      color: #777;
+    }
+  }
+}
+
+.search {
+  #primary {
+    header:before {
+      content: "\f002";
+      font-family: "FontAwesome";
+      font-size: 38px;
+      color: #777;
+    }
+  }
+}
+
+.archive, .search {
+  #primary {
+    header {
+      border-bottom: none;
+      h1.page-title {
+        margin-left: 20px;
+        .font2;
+        display: inline-block;
+        color: @site-color;
+      }
+      .taxonomy-description {
+        margin: 10px 0;
+      }
+    }
+    i {
+      font-size: 28px;
+      display: block;
+      text-align: center;
+      position: relative;
+      color: lighten(@color2, 10%);
+      @media screen and (max-width: 768px ) {
+        display: none;
+      }
+    }
+    article {
+      overflow: auto;
+      background: #eee;
+      .entry-content {
+        margin: 0px;
+        h2.entry-title {
+          clear: right;
+          margin: 40px auto;
+          .font2;
+          text-align: center;
+          a {
+            color: @site-color;
+            &:hover {
+              color: @site-color;
+            }
+          }
+        }
+      }
+      .featured-home {
+        padding: 0px;
+      }
+    }
+  }
+  .hexagon {
+    position: relative;
+    width: 20px;
+    height: 11.55px;
+    background-color: #47444d;
+    margin: 5.77px auto;
+  }
+
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  .hexagon:before {
+    bottom: 100%;
+    border-bottom: 5.77px solid #47444d;
+  }
+
+  .hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 5.77px solid #47444d;
+  }
+}
+
+
+@media screen and ( min-width: 992px ) {
+  .archive:not(.blog), .search {
+    #primary {
+      article {
+        h2.entry-title {
+          top: 30%;
+          padding: 30px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+//----Posts Page----//
+
+.page #primary, .single #primary {
+  .hexagon {
+    position: relative;
+    width: 100px;
+    height: 57.74px;
+    background-color: @site-color;
+    margin: 28.87px 0;
+  }
+
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+  }
+
+  .hexagon:before {
+    left: 0;
+    bottom: 100%;
+    border-bottom: 28.87px solid @site-color;
+  }
+
+  .hexagon:after {
+    left: 0;
+    top: 100%;
+    width: 0;
+    border-top: 28.87px solid @site-color;
+  }
+  .entry-meta {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    .font2;
+    text-transform: uppercase;
+    color: white;
+    padding: 4px 14px;
+    top: 20px;
+    .date {
+      font-size: 24px;
+    }
+    .month {
+      font-size: 9px;
+    }
+  }
+  h1.entry-title {
+    position: relative;
+    display: inline-block;
+    .font2;
+    padding-left: 10px;
+    line-height: 1.8em;
+    top: 10px;
+    color: @color2;
+  }
+  .featured-thumb {
+    margin-top: 30px;
+    img {
+      width: 80%;
+      margin: auto;
+      display: block;
+    }
+  }
+  .kindler-author {
+    .font2;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    margin:20px auto;
+    position: relative;
+    left: 24px;
+    a {
+      color: #aaa;
+    }
+  }
+  .entry-content {
+    margin-top: 0px;
+    line-height: 2.2em;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 0px;
+  }
+  .entry-footer {
+    .font2;
+    text-transform: uppercase;
+    background: url(../images/pattern.png) 0% 0% repeat-x;
+    font-size: 12px;
+    padding: 10px 8px;
+    overflow: auto;
+    a {
+      color: @site-color;
+      .font1;
+    }
+    .text {
+      display: block;
+      margin: 5px auto;
+      .font2;
+    }
+    .edit-link {
+      float: right;
+      margin: 10px;
+    }
+  }
+  .post-navigation {
+    .font2;
+    a {
+      color: @color2;
+    }
+    .nav-previous {
+      a:before {
+        content: "\f053";
+        font-family: "FontAwesome";
+        margin-right: 10px;
+      }
+    }
+    .nav-next {
+      a:after {
+        content: "\f054";
+        font-family: "FontAwesome";
+        margin-left: 10px;
+      }
+    }
+  }
+}

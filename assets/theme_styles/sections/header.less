@@ -1,0 +1,162 @@
+//----Header----//
+
+#masthead {
+  position: relative;
+  text-align: center;
+  height: 750px;
+  overflow: hidden;
+  #social-share {
+    position: absolute;
+    float: left;
+    font-size: 32px;
+    margin: 20px;
+    cursor: pointer;
+    padding-top: 8px;
+  }
+  #social-icons {
+    position: relative;
+    width: 0px;
+    font-size: 32px;
+    padding: 10px 0;
+    display: inline-block;
+    float: left;
+    left: -70px;
+    i {
+      margin: 20px;
+    }
+  }
+  .site-branding {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    .site-title {
+      font-family: "Revalia",sans-serif;
+      text-transform: uppercase;
+      font-size: 45px;
+    }
+    .site-description {
+      font-size: 18px;
+    }
+  }
+  #search-head {
+    position: relative;
+    top: 20px;
+    div#searchform {
+      position: relative;
+      display: inline-block;
+      bottom: 10%;
+      left: ~"calc(50% + 100px)";
+    }
+    div#searchform {
+      z-index: 99;
+      button {
+        display: none;
+      }
+      input[type="text"] {
+        background-color: rgba(255,255,255,.4);
+        width: 200px;
+        border: solid 2px white;
+        transform-origin: top left;
+        border-radius: 0px;
+        outline: none;
+      }
+    }
+  }
+  #search-icon {
+    position: relative;
+    display: inline-block;
+    bottom: 10%;
+    font-size: 20px;
+    left: ~"calc(50% - 27px)";
+    z-index: 99;
+    cursor: pointer;
+    i.fa-circle {
+      font-size: 72px;
+      width: auto;
+      color: #000;
+    }
+    i.fa-search {
+      font-size: 20px;
+      position: absolute;
+      top: ~"calc(50% - 18px)";
+      left: ~"calc(50% + 80px)";
+    }
+  }
+}
+
+#masthead-2 {
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+  .site-branding {
+    #logo {
+      display: inline-block;
+    }
+    .site-title {
+      font-family: "Revalia",sans-serif;
+      font-size: 45px;
+      text-transform: uppercase;
+      a {
+        color: @site-color;
+      }
+    }
+    .site-description {
+      font-size: 15px;
+      color: lighten(@color2, 10%);
+    }
+  }
+  #search-head {
+    margin: 40px auto;
+    text-align: center;
+    #searchform {
+      display: inline-block;
+      top: 20px;
+      z-index: 99;
+      button {
+        display: none;
+      }
+      input[type="text"] {
+        width: 400px;
+        background: none;
+        border: solid 1px #ddd;
+        border-radius: 0px;
+        transform-origin: top left;
+        outline: none;
+      }
+    }
+  }
+  #search-icon {
+    position:absolute;
+    display: inline-block;
+    font-size: 20px;
+    left: ~"calc(50% - 27px)";
+    z-index: 99;
+    cursor: pointer;
+    i.fa-circle {
+      font-size: 72px;
+      width: auto;
+      color: #000;
+    }
+    i.fa-search {
+      font-size: 20px;
+      position: absolute;
+      top: ~"calc(50% - 18px)";
+      left: ~"calc(50% - 22px)";
+    }
+  }
+}
+
+#logo {
+  position: relative;
+  max-width: 350px;
+  display: block;
+  margin: auto;
+}
+
+#header-image {
+  position: relative;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

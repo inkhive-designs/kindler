@@ -15,7 +15,7 @@
 			<a href="<?php the_permalink(); ?>"><?php 
 				echo the_post_thumbnail('kindler-home-thumb'); ?></a>
 			<?php else: ?>	
-		<a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri()."/images/dthumb.jpg" ); ?>"></a>
+		<a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri()."/assets/images/dthumb.jpg" ); ?>"></a>
 	<?php endif; ?>	
 		</div>
 		<div class="entry-content col-lg-6 col-md-6 col-sm-6 col-xs-12">

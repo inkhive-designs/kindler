@@ -1,0 +1,184 @@
+/*---- Showcase ----*/
+
+@media screen and (min-width: 768px) {
+  #showcase-wrapper {
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+    display: inline-block;
+    float: none;
+    h1#showcase-title {
+      margin: 60px auto;
+      .font2;
+      font-weight: 700;
+      letter-spacing: .05em;
+    }
+    .showcase-box {
+      padding: 0px;
+      background: @color2;
+      .showcase-image {
+        position: relative;
+        opacity: 1;
+        transition: opacity .1s ease-in;
+        img {
+          width: 100%;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: #47444d;
+          opacity: 0;
+          transition: opacity .2s ease-in;
+        }
+      }
+      @media screen and (max-width: 768px ) {
+        margin-bottom: 30px;
+        .showcase-image {
+          border: solid 3px @site-color;
+          img {
+            width: 100%;
+          }
+        }
+        .showcase-image:before, .showcase-image:after {
+          display: none;
+        }
+      }
+      .showcase-title {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+        padding: 0px 30px;
+        font-size: 24px;
+        text-transform: uppercase;
+        .font2;
+        letter-spacing: .05em;
+        color: white;
+        opacity: 0;
+        transition: opacity ease-in .2s;
+        color: @site-color;
+        z-index: 99;
+        a {
+          position: relative;
+          color: @site-color;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 60px;
+          background: white;
+          left: ~"calc(50% - 500px)";
+          bottom: -48px;
+          transition: left .2s linear;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 60px;
+          background: white;
+          right: ~"calc(50% - 500px)";
+          transition: right .2s linear;
+          bottom: -48px;
+        }
+      }
+      .hexagon-showcase {
+        position: relative;
+        width: 20px;
+        height: 11.55px;
+        background-color: @site-color;
+        margin: 5.77px 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity .2s ease-in;
+        bottom: -53px;
+      }
+
+      .hexagon-showcase:before,
+      .hexagon-showcase:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        left: 0;
+      }
+
+      .hexagon-showcase:before {
+        bottom: 100%;
+        border-bottom: 5.77px solid @site-color;
+      }
+
+      .hexagon-showcase:after {
+        top: 100%;
+        width: 0;
+        border-top: 5.77px solid @site-color;
+      }
+      &:hover {
+        .showcase-image {
+          opacity: 1;
+          &:before {
+            border: solid 2px rgba(255,255,255,.5);
+            background: rgba(0,0,0,.5);
+          }
+          &:after {
+            opacity: .7;
+          }
+        }
+        .showcase-title {
+          opacity: 1;
+          &:after {
+            left: ~"calc(50% - 100px)";
+          }
+          &:before {
+            right: ~"calc(50% - 100px)";
+          }
+        }
+        .hexagon-showcase {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #showcase-wrapper {
+    margin-bottom: 60px;
+    h1#showcase-title {
+      margin: 60px auto;
+      .font2;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-align: center;
+    }
+    .showcase-box {
+      .showcase-title {
+        position: relative;
+        text-align: center;
+        left: 0;
+        right: 0;
+        padding: 15px 30px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-transform: uppercase;
+        .font2;
+        letter-spacing: .05em;
+        color: white;
+        color: @site-color;
+        z-index: 99;
+        a {
+          position: relative;
+          color: @site-color;
+        }
+      }
+    }
+  }
+}

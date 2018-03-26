@@ -24,7 +24,7 @@
  */
 function kindler_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'kindler_custom_header_args', array(
-		'default-image'          => get_template_directory_uri() . '/images/header.jpg',
+		'default-image'          => get_template_directory_uri() . '/assets/images/header.jpg',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1440,
 		'height'                 => 750,
@@ -33,6 +33,14 @@ function kindler_custom_header_setup() {
 		'admin-head-callback'    => 'kindler_admin_header_style',
 		'admin-preview-callback' => 'kindler_admin_header_image',
 	) ) );
+    register_default_headers( array(
+            'default-image'    => array(
+                'url'            => '%s/assets/images/header.jpg',
+                'thumbnail_url'    => '%s/assets/images/header.jpg',
+                'description'    => __('Default Header Image', 'haxel')
+            )
+        )
+    );
 }
 add_action( 'after_setup_theme', 'kindler_custom_header_setup' );
 

@@ -13,37 +13,11 @@
 
 	</div><!-- #content -->
 	<div id="footer-wrapper">
-		<?php get_template_part('social'); ?>
-	<div id="footer-sidebar" class="widget-area clear container" role="complementary">
-	<?php do_action( 'before_sidebar' ); ?>
-	<?php 
-		if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-		<div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-2'); 
-		?> </div> <?php	
-		}
-			
-		if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-		<div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-3'); 
-		?> </div> <?php	
-		}
+		<?php get_template_part('modules/social/social', 'fa'); ?>
 
-		if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
-		<div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-4'); 
-		?> </div> <?php	
-		}
-		
-		if ( is_active_sidebar( 'sidebar-5' ) ) { ?>
-		<div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-5'); 
-		?> </div> <?php	
-		}
-		?>	 		
-	</div><!-- #footer-sidebar -->
+        <?php get_sidebar('footer'); ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+        <footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( 'https://wordpress.org/', 'kindler' ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kindler' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

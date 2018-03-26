@@ -1,0 +1,169 @@
+.font1 {
+  font-family: 'Cabin', sans-serif;
+}
+
+.font2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.transform(@value) {
+  transform: @value;
+  -webkit-transform: @value;
+  -moz-transform: @value;
+  -o-transform: @value;
+  -ms-transform: @value;
+}
+
+//----Body----//
+
+body {
+  .font1;
+  line-height: 2em;
+  letter-spacing: .05em;
+}
+
+a {
+  transition: all ease .1s;
+  &:hover {
+    text-decoration: none;
+  }
+  &:visited, &:active {
+    color: black;
+  }
+}
+
+#content {
+  #primary {
+    display: inline-block;
+    margin: auto;
+  }
+}
+
+#page {
+  overflow-x: hidden;
+}
+
+body:not(.blog) {
+  #social-icons {
+    font-size: 23px;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    i {
+      border: solid 4px transparent;
+      color: @color2;
+      margin: 10px;
+      &:before {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//----Home----//
+
+.blog {
+  h1.home-title {
+    display: block;
+    text-align: center;
+    .font2;
+    font-weight: 700;
+    color: black;
+    margin: 60px auto;
+    padding: 0;
+  }
+  article {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background: @color2;
+    .featured-image {
+      padding: 0px;
+    }
+    .entry-content {
+      text-align: center;
+      color: lighten(@color2, 12%);
+      .font1;
+      font-size: 18px;
+      font-weight: 400;
+      font-style: italic;
+      padding: 0px 50px;
+      h1.entry-title {
+        width: 100%;
+        display: block;
+        float: none;
+        font-size: 24px;
+        font-style: normal;
+        .font1;
+        font-weight: 700;
+        text-align: center;
+        padding: 0px 10px;
+        margin-bottom: 0px;
+        a {
+          color: white;
+          transition: all ease .1s;
+          line-height: 1.5em;
+        }
+      }
+      .entry-meta {
+        .font2;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        font-style: normal;
+        padding: 30px 0;
+        a {
+          color: @site-color;
+        }
+      }
+      a.more-link {
+        display: inline-block;
+        font-style: normal;
+        .font2;
+        color: @site-color;
+        font-weight: 700;
+        font-size: 16px;
+        padding-top: 30px;
+        @media screen and (max-width: 992px) {
+          padding-bottom: 30px;
+        }
+      }
+      .page-links {
+        font-style: normal;
+        .font2;
+        font-size: 12px;
+        a {
+          color: lighten(@color2, 12%);
+          font-weight: 700;
+          &:hover {
+            color: lighten(@color2, 18%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  .blog {
+    article {
+      margin: 10px 0;
+      border-bottom: solid 5px black;
+      .featured-home {
+        .featured-thumb {
+          transition: none;
+          top: 0;
+        }
+      }
+      h2.entry-title {
+        position: relative !important;
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+section.widget_at_featured {
+  overflow: auto;
+}

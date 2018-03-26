@@ -1,0 +1,194 @@
+//----Featured Posts Area----//
+
+@media screen and (min-width: 768px) {
+  #fp-wrapper {
+    h1.fp-title {
+      display: block;
+      text-align: center;
+      .font2;
+      font-weight: 700;
+      color: black;
+      margin: 20px auto;
+      padding: 20px 0;
+    }
+    ul {
+      list-style: none;
+      margin-left: -45px;
+      li {
+        position: relative;
+        .fp-thumb {
+          border-top: solid 5px @color2;
+          background: @color2;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            background: @color2;
+            top: 0;
+            transition: height .3s ease;
+          }
+
+          .hexagon {
+            position: absolute;
+            width: 20px;
+            height: 11.55px;
+            background-color: #d2854c;
+            margin: 5.77px 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            margin-top: -6px;
+            transition: margin-top .3s ease;
+            z-index: 999;
+          }
+
+          .hexagon:before,
+          .hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+          }
+
+          .hexagon:before {
+            bottom: 100%;
+            border-bottom: 5.77px solid #d2854c;
+          }
+
+          .hexagon:after {
+            top: 100%;
+            width: 0;
+            border-top: 5.77px solid #d2854c;
+          }
+          .fp-title {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            h1 {
+              position: relative;
+              .font2;
+              text-align: center;
+              margin: auto;
+              font-size: 2em;
+              width: 80%;
+              line-height: 1.8em;
+              top: -50%;
+              transition: top .3s ease;
+              a {
+                color: white;
+              }
+            }
+          }
+          &:hover {
+            &:before {
+              height: 100%;
+            }
+
+            .fp-title {
+              h1 {
+                top: 10%;
+              }
+            }
+            .hexagon {
+              margin-top: -20%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  #fp-wrapper {
+    h1.fp-title {
+      display: block;
+      text-align: center;
+      .font2;
+      font-weight: 700;
+      color: black;
+      margin: 20px auto;
+      padding: 20px 0;
+    }
+    ul {
+      list-style: none;
+      margin-left: -45px;
+      li {
+        position: relative;
+        margin-bottom: 30px;
+        .fp-thumb {
+          border-top: solid 5px @color2;
+          background: @color2;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            background: @color2;
+            top: 0;
+            transition: height .3s ease;
+          }
+
+          .hexagon {
+            position: relative;
+            width: 20px;
+            height: 11.55px;
+            background-color: #d2854c;
+            margin: 5.77px 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            margin-top: -6px;
+            transition: margin-top .3s ease;
+            z-index: 999;
+          }
+
+          .hexagon:before,
+          .hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+          }
+
+          .hexagon:before {
+            bottom: 100%;
+            border-bottom: 5.77px solid #d2854c;
+          }
+
+          .hexagon:after {
+            top: 100%;
+            width: 0;
+            border-top: 5.77px solid #d2854c;
+          }
+          .fp-title {
+            position: relative;
+            h1 {
+              position: relative;
+              .font2;
+              text-align: center;
+              margin: auto;
+              font-size: 2em;
+              width: 80%;
+              line-height: 1.8em;
+              top: -50%;
+              transition: top .3s ease;
+              padding: 20px 0px;
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

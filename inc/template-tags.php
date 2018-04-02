@@ -69,6 +69,28 @@ function kindler_posted_on() {
 }
 endif;
 
+function kindler_posted_on_date() {
+    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+    if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+        $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+    }
+
+    $time_string = sprintf( $time_string,
+        esc_attr( get_the_date( 'F j, Y' ) ),
+        esc_html( get_the_date('F j, Y') ),
+        esc_attr( get_the_modified_date( 'F j, Y' ) ),
+        esc_html( get_the_modified_date('F j, Y') )
+    );
+
+    $posted_on = sprintf(
+        '%s',
+        '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+    );
+
+    echo '<span class="posted-on">' . $posted_on . '</span>';
+
+}
+
 if ( ! function_exists( 'kindler_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.

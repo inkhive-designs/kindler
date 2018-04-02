@@ -18,3 +18,56 @@ function kindler_get_image_id($image_url) {
     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ));
     return $attachment[0];
 }
+
+/*
+** Function to check if Sidebar is enabled on Current Page 
+*/
+
+function kindler_load_sidebar() {
+    $load_sidebar = true;
+    if ( get_theme_mod('kindler_disable_sidebar') ) :
+        $load_sidebar = false;
+    elseif( get_theme_mod('kindler_disable_sidebar_home') && is_home() )	:
+        $load_sidebar = false;
+    elseif( get_theme_mod('kindler_disable_sidebar_front') && is_front_page() ) :
+        $load_sidebar = false;
+    endif;
+
+    return  $load_sidebar;
+}
+
+/*
+**	Determining Sidebar and Primary Width
+*/
+function kindler_primary_class() {
+    $sw = get_theme_mod('kindler_sidebar_width',4);
+    $class = "col-md-".(12-$sw);
+
+    if ( !kindler_load_sidebar() )
+        $class = "col-md-12";
+
+    echo $class;
+}
+add_action('kindler_primary-width', 'kindler_primary_class');
+
+function kindler_secondary_class() {
+    $sw = get_theme_mod('kindler_sidebar_width',4);
+    $class = "col-md-".$sw;
+
+    echo $class;
+}
+add_action('kindler_secondary-width', 'kindler_secondary_class');
+
+
+/*
+** Function to Get Theme Layout 
+*/
+function kindler_get_blog_layout(){
+    $ldir = 'framework/layouts/content';
+    if (get_theme_mod('kindler_blog_layout') ) :
+        get_template_part( $ldir , get_theme_mod('kindler_blog_layout') );
+    else :
+        get_template_part( $ldir ,'grid');
+    endif;
+}
+add_action('kindler_blog_layout', 'kindler_get_blog_layout');

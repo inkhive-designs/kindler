@@ -12,7 +12,7 @@ function kindler_custom_css_mods() {
     endif;
 
     if ( get_theme_mod('title_color') ) :
-        echo "#masthead h1.site-title a, #masthead.other .site-branding h1.site-title a { color: ".esc_html(get_theme_mod('kindler_site_titlecolor', 'black'))."; }";
+        echo "#masthead h1.site-title a, #masthead.other .site-branding h1.site-title a { color: ".esc_html(get_theme_mod('title_color', '#d2854c'))."; }";
     endif;
 
 

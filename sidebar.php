@@ -10,8 +10,9 @@
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
-?>
 
-<div id="secondary" class="widget-area col-lg-4 col-md-4 col-sm-4 col-xs-12" role="complementary">
+if ( kindler_load_sidebar() ) : ?>
+<div id="secondary" class="widget-area  <?php do_action('kindler_secondary-width') ?>" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div><!-- #secondary -->
+<?php endif; ?>

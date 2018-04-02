@@ -37,7 +37,7 @@ function kindler_custom_header_setup() {
             'default-image'    => array(
                 'url'            => '%s/assets/images/header.jpg',
                 'thumbnail_url'    => '%s/assets/images/header.jpg',
-                'description'    => __('Default Header Image', 'haxel')
+                'description'    => __('Default Header Image', 'kindler')
             )
         )
     );

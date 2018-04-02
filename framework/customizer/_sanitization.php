@@ -1,8 +1,5 @@
 <?php
 function kindler_customize_register_sanitization($wp_customize) {
-    function kindler_sanitize_text( $t ) {
-        return wp_kses_post( force_balance_tags( $t ) );
-    }
 
     function kindler_sanitize_checkbox( $i ) {
         if ( $i == 1 ) {

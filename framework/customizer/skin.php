@@ -6,7 +6,7 @@ function kindler_customize_register_skin($wp_customize) {
     $wp_customize->get_section( 'colors' )->panel = 'kindler_design_panel';
 
     $wp_customize->add_setting('title_color', array(
-            'default'		=>	'black',
+            'default'		=>	'#d2854c',
             'sanitize_callback'	=>	'sanitize_hex_color',
             'transport'		=>	'postMessage',
         )

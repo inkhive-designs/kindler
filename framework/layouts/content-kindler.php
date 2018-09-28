@@ -8,7 +8,7 @@
 
     <div class="featured-image col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <?php if (has_post_thumbnail()) : ?>
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('kindler-thumb'); ?></a>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('kindler-home-thumb'); ?></a>
         <?php else: ?>
             <a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri()."/assets/images/dthumb.jpg" ); ?>"></a>
         <?php endif; ?>
@@ -28,11 +28,8 @@
             </div><!-- .entry-meta -->
         <?php endif; ?>
         <div class="excerpt">
-            <?php if(kindler_load_sidebar(true)): ?>
-                <i class="fa fa-star" aria-hidden="true"></i>
-            <?php else: ?>
-                <?php echo substr(get_the_content(), 0, 300)."..."; ?>
-            <?php endif; ?>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        	<div class="entry-excerpt"><?php echo substr(get_the_excerpt(),0,50).(get_the_excerpt() ? "..." : "" ); ?></div>
         </div>
         <a href="<?php the_permalink(); ?>" class="more-link"><?php _e('READ MORE','kindler'); ?></a>
         <?php

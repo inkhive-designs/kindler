@@ -52,7 +52,6 @@ if ( ! function_exists( 'kindler_setup' ) ) :
         add_theme_support('custom-logo');
 
         add_image_size('kindler-home-thumb', 600, 600, true);
-
         add_image_size('kindler-fp-thumb', 600, 400, true);
 
         add_theme_support( 'custom-header' );

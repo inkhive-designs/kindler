@@ -31,7 +31,7 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'modules/content/content', 'grid' );
+				get_template_part( 'framework/layouts/content', 'kindler' );
 				?>
 
 			<?php endwhile; ?>
